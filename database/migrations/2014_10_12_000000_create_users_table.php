@@ -29,6 +29,10 @@ class CreateUsersTable extends Migration
             $table->string('profilepic')->nullable();
             $table->boolean('dealer_approve')->default('0');
             $table->string('shopname',100)->unique()->nullable();
+            $table->double('defaultdev')->nullable();
+            $table->double('freeshipwhenprice')->nullable();
+            $table->double('couponwhenprice')->nullable();
+            $table->string('codegiftwhenprice')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
